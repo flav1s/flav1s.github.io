@@ -1,11 +1,23 @@
-const debug = process.env.NODE_ENV !== "production";
-
-module.exports = {
-  exportPathMap: function () {
-    return {
-      "/": { page: "/" },
-      "/ap-grid-layout": { page: "/ap-grid-layout" },
-    };
+const withPlugins = require("next-compose-plugins");
+const optimizedImages = require("next-optimized-images");
+module.exports = withPlugins([
+  [
+    optimizedImages,
+    {
+      mozjpeg: {
+        quality: 80,
+      },
+      pngquant: {
+        speed: 3,
+        strip: true,
+        verbose: true,
+      },
+      imagesPublicPath: "/portfolio/_next/static/images/",
+    },
+  ],
+  {
+    basePath: "/portfolio",
+    assetPrefix: "/portfolio/",
+    env,
   },
-  assetPrefix: !debug ? "https://flav1s.github.io/portfolio/" : "",
-};
+]);
