@@ -13,11 +13,11 @@ module.exports = withPlugins([
         strip: true,
         verbose: true,
       },
-      imagesPublicPath: "/portfolio/_next/static/images/",
+      imagesPublicPath: "/_next/static/images/",
     },
   ],
   {
-    basePath: "/portfolio",
-    assetPrefix: "/portfolio/",
+    basePath: "",
+    assetPrefix: "/",
   },
 ]);

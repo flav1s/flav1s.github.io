@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import { Box } from "@chakra-ui/react";
 import Header from "../components/Header";
+import { Resume } from "../components/Resume";
 
 const Home: NextPage = () => {
   return (
@@ -13,9 +14,9 @@ const Home: NextPage = () => {
       h="100vh"
       overflowX="hidden"
     >
-      <Header />
+      {/* <Header /> */}
 
-      <p>Hello World</p>
+      <Resume />
     </Box>
   );
 };
