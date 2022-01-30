@@ -21,6 +21,10 @@ export const theme = extendTheme({
     },
   },
   textStyles: {
+    h1: {
+      fontWeight: 600,
+      fontSize: "2rem",
+    },
     h4: {
       fontWeight: 600,
       fontSize: "1.5rem",

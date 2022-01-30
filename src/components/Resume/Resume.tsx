@@ -15,8 +15,8 @@ const Resume = () => {
   });
 
   return (
-    <Flex my={20} flexDirection="column" alignContent="center">
-      <SimpleGrid columns={{ sm: 1, md: 2 }} spacing={10}>
+    <Flex as="article" my={20} flexDirection="column" alignContent="center">
+      <SimpleGrid columns={{ sm: 1, md: 2 }} spacing={10} as="section">
         <Flex flexDirection="column" justifyContent="center">
           <Flex justifyContent="space-between" alignItems="center" mb={3}>
             <Box>

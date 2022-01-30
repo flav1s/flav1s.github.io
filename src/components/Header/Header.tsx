@@ -13,7 +13,7 @@ const Header = () => {
       py={27}
       mx="auto"
     >
-      <SimpleGrid columns={3} spacing={10}>
+      <SimpleGrid as="nav" columns={3} spacing={10}>
         <Link textStyle="h5" href="#about">
           About
         </Link>
