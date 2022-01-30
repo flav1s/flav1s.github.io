@@ -7,14 +7,14 @@ const Home: NextPage = () => {
   return (
     <Box
       my="1"
-      maxWidth={1480}
+      maxWidth="2xl"
       mx="auto"
       px="6"
       w="100vw"
       h="100vh"
       overflowX="hidden"
     >
-      {/* <Header /> */}
+      <Header />
 
       <Resume />
     </Box>
