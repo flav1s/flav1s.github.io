@@ -5,7 +5,7 @@ export const workExperience = [
     url: "",
     cardSubtitle: "Frontend Software Engineer",
     cardDetailedText:
-      "Frontend planning and development focused on the insurance market. Framework used: ReactJS and NextJS.",
+      "Frontend planning and development focused on the insurance market using Agile methodology. Lib: ReactJS. ",
   },
   {
     title: "2019 - 2021",

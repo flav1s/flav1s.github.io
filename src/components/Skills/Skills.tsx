@@ -9,10 +9,11 @@ const Skills = () => {
           ▫ Skills
         </Text>
         <SimpleGrid
-          columns={{ sm: 1, md: 4 }}
+          columns={[2, 2, 3]}
           mt={10}
           spacing={10}
           as="section"
+          px={6}
         >
           <img width="50%" src="/images/javascript.svg" alt="javascript logo" />
           <img width="50%" src="/images/typescript.svg" alt="typescript logo" />
