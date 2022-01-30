@@ -1,25 +1,54 @@
-import { Flex, Link, SimpleGrid, Text } from "@chakra-ui/react";
+import {
+  Flex,
+  Link,
+  SimpleGrid,
+  Text,
+  Box,
+  useBreakpointValue,
+} from "@chakra-ui/react";
 import React from "react";
 
 const Resume = () => {
+  const isWideVersion = useBreakpointValue({
+    base: false,
+    md: true,
+  });
+
   return (
-    <Flex mx={64} my={20} flexDirection="column">
-      <SimpleGrid columns={2} spacing={10}>
+    <Flex
+      mx={isWideVersion && 64}
+      my={20}
+      flexDirection="column"
+      alignContent="center"
+    >
+      <SimpleGrid columns={isWideVersion && 2} spacing={10}>
         <Flex flexDirection="column" justifyContent="center">
-          <Text
-            bg="cyan.500"
-            color="grey.700"
-            p={1}
-            fontWeight="600"
-            borderRadius={8}
-            width="fit-content"
-            fontSize="0.8rem"
+          <Flex
+            justifyContent="space-between"
+            alignItems="center"
+            mb={!isWideVersion && 3}
           >
-            Frontend Developer
-          </Text>
-          <Text my={3} textStyle="h4" lineHeight="0.8">
-            Flávia Rocha
-          </Text>
+            <Box>
+              <Text
+                bg="cyan.500"
+                color="grey.700"
+                p={1}
+                fontWeight="600"
+                borderRadius={8}
+                width="fit-content"
+                fontSize="0.8rem"
+              >
+                Frontend Developer
+              </Text>
+              <Text my={3} textStyle="h4" lineHeight="0.8">
+                Flávia Rocha
+              </Text>
+            </Box>
+
+            {!isWideVersion && (
+              <img width="40%" src="/images/girl_code.svg" alt="girl coding" />
+            )}
+          </Flex>
           <Text fontSize="0.9rem" mt={2}>
             Bacharel em Engenharia de Controle e Automação, trabalha com
             desenvolvimento web desde 2019 (
@@ -40,7 +69,7 @@ const Resume = () => {
             </Link>
           </SimpleGrid>
         </Flex>
-        <img src="/images/girl_code.svg" alt="girl coding" />
+        {isWideVersion && <img src="/images/girl_code.svg" alt="girl coding" />}
       </SimpleGrid>
     </Flex>
   );
