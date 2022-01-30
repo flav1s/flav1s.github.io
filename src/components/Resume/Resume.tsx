@@ -32,7 +32,7 @@ const Resume = () => {
                 Frontend Developer
               </Text>
               <Text my={3} textStyle="h4" lineHeight="0.8">
-                Flávia Rocha
+                Hi, I'm Flávia 👋
               </Text>
             </Box>
 
@@ -40,12 +40,12 @@ const Resume = () => {
               <img width="40%" src="/images/girl_code.svg" alt="girl coding" />
             )}
           </Flex>
-          <Text fontSize="0.9rem" mt={2}>
-            Bacharel em Engenharia de Controle e Automação, trabalha com
-            desenvolvimento web desde 2019 (
-            <strong>Typescript/Javascript</strong> e <strong>Python</strong>),
-            como desenvolvedora full-stack. Atualmente tem focado no
-            desenvolvimento frontend (<strong>ReactJS / NextJS</strong>).
+          <Text as="p" fontSize="0.9rem" mt={2}>
+            I'm a frontend developer experienced in Angular and ReactJS from
+            Brazil. 🇧🇷
+          </Text>
+          <Text as="p" fontSize="0.9rem" mt={2}>
+            Also worked as a fullstack developer using Python (Django/Flask).
           </Text>
 
           <SimpleGrid columns={3} gap={1} width="30%" my={3}>

@@ -15,13 +15,13 @@ const Header = () => {
     >
       <SimpleGrid columns={3} spacing={10}>
         <Link textStyle="h5" href="#about">
-          Sobre
+          About
         </Link>
         <Link textStyle="h5" href="#skills">
           Skills
         </Link>
         <Link textStyle="h5" href="#contact">
-          Contato
+          Contact
         </Link>
       </SimpleGrid>
     </Flex>
