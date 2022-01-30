@@ -3,6 +3,7 @@ import { Box } from "@chakra-ui/react";
 import Header from "../components/Header";
 import { Resume } from "../components/Resume";
 import { About } from "../components/About";
+import { Skills } from "../components/Skills";
 
 const Home: NextPage = () => {
   return (
@@ -19,6 +20,7 @@ const Home: NextPage = () => {
 
       <Resume />
       <About />
+      <Skills />
     </Box>
   );
 };
