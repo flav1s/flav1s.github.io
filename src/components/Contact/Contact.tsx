@@ -11,9 +11,11 @@ const Contact = () => {
         <SimpleGrid spacing={8} columns={{ sm: 1, md: 2 }} px={6}>
           <Flex alignItems="center">
             <img width="30px" src="/images/email.svg" alt="email" />
-            <Text as="p" fontSize="0.9rem" ml={2} fontWeight={600}>
-              flaviaccruzr [ @ ] gmail.com
-            </Text>
+            <Link>
+              <Text as="p" fontSize="0.9rem" ml={2} fontWeight={600}>
+                flaviaccruzr [ @ ] gmail.com
+              </Text>
+            </Link>
           </Flex>
 
           <Flex alignItems="center">

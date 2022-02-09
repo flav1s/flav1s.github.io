@@ -1,7 +1,10 @@
 import React from "react";
-import { Flex, Link, SimpleGrid } from "@chakra-ui/react";
+import { Box, Flex, Link, SimpleGrid, useColorMode } from "@chakra-ui/react";
+import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 
 const Header = () => {
+  const { colorMode, toggleColorMode } = useColorMode();
+
   return (
     <Flex
       as="header"
@@ -13,7 +16,7 @@ const Header = () => {
       py={27}
       mx="auto"
     >
-      <SimpleGrid as="nav" columns={3} spacing={10}>
+      <SimpleGrid as="nav" columns={4} spacing={10}>
         <Link textStyle="h5" href="#about">
           About
         </Link>
@@ -23,6 +26,9 @@ const Header = () => {
         <Link textStyle="h5" href="#contact">
           Contact
         </Link>
+        <Box onClick={toggleColorMode} display="flex" alignItems="center">
+          {colorMode === "light" ? <MoonIcon color="grey.300" /> : <SunIcon />}
+        </Box>
       </SimpleGrid>
     </Flex>
   );

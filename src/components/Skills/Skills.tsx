@@ -1,7 +1,8 @@
-import { Box, Flex, SimpleGrid, Text } from "@chakra-ui/react";
+import { Box, Flex, SimpleGrid, Text, useColorMode } from "@chakra-ui/react";
 import React from "react";
 
 const Skills = () => {
+  const { colorMode } = useColorMode();
   return (
     <Flex id="skills" flexDir="column" my={20} as="article">
       <Box mb={10} as="section">
@@ -21,7 +22,11 @@ const Skills = () => {
           <img width="50%" src="/images/html5.svg" alt="html5 logo" />
           <img width="50%" src="/images/css.svg" alt="css logo" />
           <img width="50%" src="/images/react.svg" alt="react logo" />
-          <img width="50%" src="/images/nextjs.svg" alt="nextjs logo" />
+          {colorMode === "light" ? (
+            <img width="50%" src="/images/nextjsLight.svg" alt="nextjs logo" />
+          ) : (
+            <img width="50%" src="/images/nextjsDark.svg" alt="nextjs logo" />
+          )}
           <img width="50%" src="/images/angular.svg" alt="angular logo" />
           <img width="50%" src="/images/django.svg" alt="django logo" />
           <img width="50%" src="/images/postgres.svg" alt="postgresql logo" />

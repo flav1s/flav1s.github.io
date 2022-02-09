@@ -1,11 +1,16 @@
 import { extendTheme } from "@chakra-ui/react";
+import { mode } from "@chakra-ui/theme-tools";
 
 export const theme = extendTheme({
+  config: {
+    initialColorMode: "dark",
+    useSystemColorMode: true,
+  },
   components: {
     Link: {
       variants: {
         primary: ({ colorScheme = "grey.100" }) => ({
-          color: `${colorScheme}`,
+          color: mode("grey.300", `${colorScheme}`),
           _hover: {
             filter: "brightness(0.8)",
             textDecoration: "none",
@@ -72,14 +77,14 @@ export const theme = extendTheme({
     body: "Roboto",
   },
   styles: {
-    global: {
+    global: (props) => ({
       body: {
         margin: 0,
         padding: 0,
         boxSizing: "border-box",
-        bg: "black.800",
-        color: "grey.100",
+        bg: mode("white.900", "black.800")(props),
+        color: mode("grey.900", "grey.100")(props),
       },
-    },
+    }),
   },
 });
